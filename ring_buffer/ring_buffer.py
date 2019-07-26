@@ -13,9 +13,9 @@ class RingBuffer:
 
   def get(self):
     new = []
-    for i in range (self.capacity):
-      if self.storage[i]:
-        new.append(self.storage[i])
+    for i in self.storage:
+      if i is not None:
+        new.append(i)
     return new
       
 
